@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (result.status == 200) {
           console.log(result.data);
         } 
+        else {
+            const errorMessage = result.message;
+        }
       })
       .catch((err) => console.log(err));
   }
