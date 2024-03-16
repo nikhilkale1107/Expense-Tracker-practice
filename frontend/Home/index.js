@@ -38,17 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Display expenses
     function displayExpenses() {
       expensesList.innerHTML = "";
-
-
       axios
         .get(
           "http://localhost:4000/expense" )
         .then(function (response) {
           let data = response.data;
-
-
-
-
 
           data.expenses.forEach(function (expense, index) {
             const li = document.createElement("li");
@@ -69,7 +63,4 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log(error);
         });
     }
-
-
-
   });
